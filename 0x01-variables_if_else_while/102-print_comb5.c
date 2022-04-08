@@ -7,34 +7,42 @@
 
 int main(void)
 {
-	int tens;
-	int ones;
-	int t;
-	int o;
+	int c;
+	int d;
+	int e;
+	int f = 0;
 
-	for (tens = '0'; tens <= '9'; tens++)
+	while (f < 10)
 	{
-		for (ones = '0'; ones <= '9'; ones++)
+		e = 0;
+		while (e < 10)
 		{
-			for (t = tens; t <= '9'; t++)
+			d = 0;
+			while (d < 10)
 			{
-				for (o = ones + 1; o <= '9'; o++)
+				c = 0;
+				while (c < 10)
 				{
-					putchar(tens);
-					putchar(ones);
-					putchar(' ');
-					putchar(t);
-					putchar(o);
-					if (!((tens == '9' && ones == '8') &&
-								(t == '9' && o == '9')))
+					if (!(f == c && e == d))
 					{
-						putchar(',');
+						putchar('0' + f);
+						putchar('0' + e);
 						putchar(' ');
+						putchar('0' + d);
+						putchar('0' + c);
+						if (!(f + e == 18 && c + d == 17 && d == 9))
+						{
+							putchar(',');
+							putchar(' ');
+						}
 					}
+					c++;
 				}
-				o = '0';
+				d++;
 			}
+			e++;
 		}
+		f++;
 	}
 	putchar('\n');
 
