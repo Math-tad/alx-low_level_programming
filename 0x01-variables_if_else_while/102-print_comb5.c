@@ -1,50 +1,110 @@
 #include <stdio.h>
 
 /**
- * main - print a num pair from 00-99
- * Return: Always 0
+ * main - starting of the code
+ * Return: always 0
  */
 
 int main(void)
-{
-	int c;
-	int d;
-	int e;
-	int f = 0;
 
-	while (f < 10)
+{
+
+	int num1 = '0';
+
+	int num2 = '0';
+
+	int num3 = '0';
+
+	int num4 = '1';
+
+	while (num1 <= '9')
+
 	{
-		e = 0;
-		while (e < 10)
+
+		while (num2 <= '9')
+
 		{
-			d = 0;
-			while (d < 10)
+
+			while (num3 <= '9')
+
 			{
-				c = 0;
-				while (c < 10)
+
+				while (num4 <= '9')
+
 				{
-					if (!(f == c && e == d))
+
+					if (num1 == num3 && num2 == num4)
+
 					{
-						putchar('0' + f);
-						putchar('0' + e);
-						putchar(' ');
-						putchar('0' + d);
-						putchar('0' + c);
-						if (!(f + e == 18 && c + d == 17 && d == 9))
-						{
-							putchar(',');
-							putchar(' ');
-						}
+
 					}
-					c++;
+
+					else
+
+					{
+
+						putchar(num1);
+
+						putchar(num2);
+
+						putchar(' ');
+
+						putchar(num3);
+
+						putchar(num4);
+
+
+
+						if (num1 == '9' && num2 == '8' && num3 == '9' && num4 == '9')
+
+						{
+
+						}
+
+						else
+
+						{
+
+							putchar(',');
+
+							putchar(' ');
+
+						}
+
+						num4++;
+
+					}
+
 				}
-				d++;
+
+				num3++;
+
+				 num4 = '0';
+
 			}
-			e++;
+
+			num2++;
+
+			num3 = '0';
+
+			num4 = '1';
+
 		}
-		f++;
+
+		num1++;
+
+		num2 = '0';
+
+		num3 = '0';
+
+		num4 = '1';
+
 	}
+
 	putchar('\n');
 
+
+
 	return (0);
+
 }
