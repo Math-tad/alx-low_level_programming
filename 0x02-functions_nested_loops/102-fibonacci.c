@@ -14,7 +14,7 @@ int main(void)
 
 	for (counter = 1; counter <= (countto / 2); counter++)
 	{
-		if (countto < 50)
+		if (counter < countto / 2)
 			printf("%li, %li, ", a, b);
 		else
 			printf("%li %li", a, b);
