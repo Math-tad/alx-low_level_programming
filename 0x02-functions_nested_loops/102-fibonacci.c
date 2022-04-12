@@ -17,7 +17,7 @@ int main(void)
 		if (counter < countto / 2)
 			printf("%li, %li, ", a, b);
 		else
-			printf(",%li %li", a, b);
+			printf("%li, %li", a, b);
 		a += b;
 		b += a;
 	}
