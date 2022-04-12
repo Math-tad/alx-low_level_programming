@@ -14,7 +14,10 @@ int main(void)
 
 	for (counter = 1; counter <= (countto / 2); counter++)
 	{
-		printf("%li, %li, ", a, b);
+		if (countto < 50)
+			printf("%li, %li, ", a, b);
+		else
+			printf("%li %li", a, b);
 		a += b;
 		b += a;
 	}
