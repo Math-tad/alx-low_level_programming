@@ -28,7 +28,7 @@ char *rot13(char *s)
 
 	while (s[k] != '\0')
 	{
-		while (lt[j] != '\0' && s[k] != lt[i])
+		while (lt[j] != '\0' && s[k] != lt[j])
 		{
 			j++;
 		}
