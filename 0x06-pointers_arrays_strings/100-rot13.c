@@ -28,14 +28,13 @@ char *rot13(char *s)
 
 	while (s[k] != '\0')
 	{
-		while (j < 52)
+		while (lt[j] != '\0' && s[k] != lt[i])
 		{
-			if (s[k] == lt[j])
-			{
-				s[k] = rot[j];
-			}
 			j++;
 		}
+		if (s[j] == a[i])
+			s[j] = b[i];
+
 		j = 0;
 		k++;
 	}
