@@ -32,8 +32,8 @@ char *rot13(char *s)
 		{
 			j++;
 		}
-		if (s[j] == a[i])
-			s[j] = b[i];
+		if (s[k] == lt[j])
+			s[k] = b[j];
 
 		j = 0;
 		k++;
