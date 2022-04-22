@@ -75,24 +75,25 @@ char *rev_str(char *s)
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	long long int num1 = atoi(n1);
-	long long int num2 = atoi(n2);
+	unsigned long int num1 = atol(n1);
+	unsigned long int num2 = atol(n2);
 
-	int sum = num1 + num2;
+	unsigned long int sum = num1 + num2;
 
 	int i = 0;
 
+	while (i < num_dig(sum))
+	{
+		r[i] = (sum % 10) + '0';
+		sum /= 10;
+		i++;
+	}
 	if ((size_r + 1) >= strlen(r))
 	{
-		while (i < num_dig(sum))
-		{
-			r[i] = (sum % 10) + '0';
-			sum /= 10;
-			i++;
-		}
-/*r = rev_str(r);*/
+		r = rev_str(r);
 		return (r);
 	}
+
 	else
 		return (0);
 }
