@@ -4,6 +4,24 @@
 #include <string.h>
 
 /**
+ * num_dig - number of digits in a number
+ * @num: number
+ * Return: number of digits
+ */
+
+int num_dig (long long int num)
+{
+	long long n = num;
+	int count = 0;
+
+	do {
+		n /= 10;
+		++count;
+	} while (n != 0);
+	return (count);
+}
+
+/**
  * _strlen - length of a string
  * @s: string
  * Return: returns the length of a string
@@ -62,17 +80,17 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 
 	int sum = num1 + num2;
 
-	int i;
+	int i = 0;
 
-	if ((size_r + 1) >= sizeof(r))
+	if ((size_r + 1) >= strlen(r))
 	{
-		while (i < sizeof(sum))
+		while (i < num_dig(sum))
 		{
-			r[i] = sum % 10;
+			r[i] = (sum % 10) + '0';
 			sum /= 10;
 			i++;
 		}
-		r = rev_str(r);
+/*r = rev_str(r);*/
 		return (r);
 	}
 	else
