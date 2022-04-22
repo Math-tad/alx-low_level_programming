@@ -4,6 +4,49 @@
 #include <string.h>
 
 /**
+ * _strlen - length of a string
+ * @s: string
+ * Return: returns the length of a string
+ */
+
+int _strlen(char *s)
+{
+	int len = 0;
+
+	while (*s != '\0')
+	{
+		len++;
+		s++;
+	}
+
+	return (len);
+}
+
+/**
+ * rev_str - reverses a string
+ * @s: string to be reversed
+ * Return: reversed string
+ */
+
+char *rev_str(char *s)
+{
+	int i = 0;
+	int j = (_strlen(s) - 1);
+	char tmp;
+
+	while (i < j)
+	{
+		tmp = s[i];
+		s[i] = s[j];
+		s[j] = tmp;
+		i++;
+		j--;
+	}
+
+	return (s);
+}
+
+/**
  * infinite_add - sum up two numbers
  * @n1: number1
  * @n2: number2
