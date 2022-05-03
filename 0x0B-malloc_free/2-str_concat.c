@@ -32,19 +32,17 @@ char *str_concat(char *s1, char *s2)
 		len2++;
 		i++;
 	}
-	p = malloc(sizeof(char) * (len1 + len2) +1);
+	p = malloc(sizeof(char) * (len1 + len2) + 1);
 
 	if (p == NULL)
 		return (NULL);
 
 	i = 0;
-
 	while (s1[i] != '\0')
 	{
 		p[i] = s1[i];
 		i++;
 	}
-
 	while (s2[j] != '\0')
 	{
 		p[i] = s2[j];
