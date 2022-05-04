@@ -26,7 +26,7 @@ char **strtow(char *str)
 	if (str[0] == ' ' && len == 1)
 		return (NULL);
 
-	p = malloc(sizeof(char *) * (len) - 1183);
+	p = malloc(sizeof(char *) * (len) - 1086);
 	if (p == NULL)
 		return (NULL);
 
