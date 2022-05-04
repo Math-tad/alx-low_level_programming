@@ -40,12 +40,15 @@ char **strtow(char *str)
 		}
 		if (str[k] == ' ')
 		{
-			if (str[k + 1] != ' ')
+			/*if (str[k + 1] != ' ')
 			{
 				p[j][i] = '\0';
 				j++;
 				i = 0;
-			}
+			}*/
+			p[j][i] = '\0';
+			j++;
+			i = 0;
 		}
 		k++;
 	}
