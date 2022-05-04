@@ -26,7 +26,7 @@ char **strtow(char *str)
 	if (str[0] == ' ' && len == 1)
 		return (NULL);
 
-	p = malloc(sizeof(char *) * (len) - 1086);
+	p = malloc(sizeof(char *) * (len));
 	if (p == NULL)
 		return (NULL);
 
@@ -55,5 +55,6 @@ char **strtow(char *str)
 		k++;
 	}
 
+	free(p[k]);
 	return (p);
 }
