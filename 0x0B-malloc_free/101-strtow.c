@@ -52,9 +52,10 @@ char **strtow(char *str)
 			p[j][i] = str[k];
 			i++;
 		}
+		free(p[k]);
 		k++;
 	}
 
-	free(p[k]);
+	free(p);
 	return (p);
 }
