@@ -42,7 +42,7 @@ char **strtow(char *str)
 				i = 0;
 			}
 			else
-				break;
+				return (NULL);
 			/*p[j][i] = '\0';
 			j++;
 			i = 0;*/
