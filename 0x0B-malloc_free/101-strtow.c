@@ -33,11 +33,6 @@ char **strtow(char *str)
 	while (str[k] != '\0')
 	{
 		p[i] = malloc(sizeof(char) * len);
-		if (str[k] != ' ' || str[k] != '\0')
-		{
-			p[j][i] = str[k];
-			i++;
-		}
 		if (str[k] == ' ' ||  str[k] == '\0')
 		{
 			/*if (str[k + 1] != ' ')
@@ -49,6 +44,11 @@ char **strtow(char *str)
 			p[j][i] = '\0';
 			j++;
 			i = 0;
+		}
+		else
+		{
+			p[j][i] = str[k];
+			i++;
 		}
 		k++;
 	}
