@@ -38,7 +38,7 @@ char **strtow(char *str)
 			p[j][i] = str[k];
 			i++;
 		}
-		if (str[k] == ' ')
+		if (str[k] == ' ' ||  str[k] == '\0')
 		{
 			/*if (str[k + 1] != ' ')
 			{
