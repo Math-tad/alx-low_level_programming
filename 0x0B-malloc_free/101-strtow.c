@@ -26,13 +26,13 @@ char **strtow(char *str)
 	if (len == 1 && str[k] == ' ')
 		return (NULL);
 
-	p = (char*)malloc(sizeof(char) * (len));
+	p = malloc(sizeof(char *) * (len));
 	if (p == NULL)
 		return (NULL);
 
 	while (str[k] != '\0')
 	{
-		p[i] = malloc(sizeof(char) * len);
+		p[j] = malloc(sizeof(char) * len);
 		if (str[k] == ' ' ||  str[k] == '\0')
 		{
 			/*if (str[k + 1] != ' ')
