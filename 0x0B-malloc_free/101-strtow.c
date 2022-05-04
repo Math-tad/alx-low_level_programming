@@ -32,7 +32,7 @@ char **strtow(char *str)
 
 	while (str[k] != '\0')
 	{
-		p[j] = malloc(sizeof(char) * len);
+		p[k] = malloc(sizeof(char) * len);
 		if (str[k] == ' ' ||  str[k] == '\0')
 		{
 			/*if (str[k + 1] != ' ')
