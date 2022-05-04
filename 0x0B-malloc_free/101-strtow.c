@@ -19,17 +19,13 @@ char **strtow(char *str)
 		i++;
 	}
 	i = 0;
-
 	if (len == 0)
 		return (NULL);
-
 	if (str[0] == ' ' && len == 1)
 		return (NULL);
-
 	p = malloc(sizeof(char *) * (len));
 	if (p == NULL)
 		return (NULL);
-
 	while (str[k] != '\0')
 	{
 		p[k] = malloc(sizeof(char) * len);
@@ -43,9 +39,6 @@ char **strtow(char *str)
 			}
 			else
 				return (NULL);
-			/*p[j][i] = '\0';
-			j++;
-			i = 0;*/
 		}
 		else
 		{
@@ -55,7 +48,6 @@ char **strtow(char *str)
 		free(p[k]);
 		k++;
 	}
-
 	free(p);
 	return (p);
 }
