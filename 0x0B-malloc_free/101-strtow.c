@@ -35,15 +35,17 @@ char **strtow(char *str)
 		p[k] = malloc(sizeof(char) * len);
 		if (str[k] == ' ' ||  str[k] == '\0')
 		{
-			/*if (str[k + 1] != ' ')
+			if (str[k + 1] != ' ')
 			{
 				p[j][i] = '\0';
 				j++;
 				i = 0;
-			}*/
-			p[j][i] = '\0';
+			}
+			else
+				break;
+			/*p[j][i] = '\0';
 			j++;
-			i = 0;
+			i = 0;*/
 		}
 		else
 		{
