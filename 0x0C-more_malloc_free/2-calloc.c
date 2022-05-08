@@ -12,13 +12,17 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *sps;
+	int i;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	sps = malloc(nmemb * size + 1);
+	sps = malloc(nmemb * size );
 	if (sps == NULL)
 		return (NULL);
+
+	for (i = 0; i < nmemb * size; i++)
+		*((char *)sps + i) = 0;
 
 	return (sps);
 }
