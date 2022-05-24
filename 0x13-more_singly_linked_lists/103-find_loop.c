@@ -8,8 +8,8 @@
 listint_t *find_listint_loop(listint_t *head)
 {
 	listint_t *turtle, *hare;
-	turtle = hare = head;
 
+	turtle = hare = head;
 	while (turtle != NULL && hare != NULL)
 	{
 		turtle = (*turtle).next;
