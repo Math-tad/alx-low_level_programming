@@ -1,6 +1,4 @@
 #include "main.h"
-#include <math.h>
-#include <stdio.h>
 
 /**
  * _len - finds length of the string given
@@ -10,11 +8,12 @@
 int _len(const char *s)
 {
 	int count = 0;
+	int j = 0;
 
-	while (*s != '\0')
+	while (s[j] != '\0')
 	{
 		count++;
-		s++;
+		j++;
 	}
 	return (count);
 }
@@ -35,13 +34,12 @@ unsigned int binary_to_uint(const char *b)
 
 	while (b[i])
 	{
-		if (b[i] != '1' || b[i] != '0')
-		{
+		if (b[i] != '1' && b[i] != '0')
 			return (0);
-		}
 
-		uint += ((b[i] + '0') * pow(2, len));
-		b++;
+		if (b[i] == '1')
+			uint += (1 * (1 << len));
+		i++;
 		len--;
 	}
 	return (uint);
