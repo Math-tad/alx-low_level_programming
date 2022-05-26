@@ -26,18 +26,20 @@ int _len(const char *s)
  */
 unsigned int binary_to_uint(const char *b)
 {
-	int len = _len(b);
+	int len = _len(b) - 1;
+	int i = 0;
 	unsigned int uint = 0;
 
-	while (*b != '\0')
+	while (b[i] != '\0')
 	{
-		if (*b != '1' || *b != '0' || *b == '\0')
+		if (b[i] != '1' || b[i] != '0' || b[i] == '\0')
 		{
 			return (0);
 		}
 
-		uint += ((*b + '0') * pow(2, len));
+		uint += ((b[i] + '0') * pow(2, len));
 		b++;
+		len--;
 	}
 	return (uint);
 }
