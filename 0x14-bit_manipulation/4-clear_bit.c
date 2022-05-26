@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * set_bit - set bit to 1 at given index
+ * clear_bit - clear bit to 0 at given index
  * @n: number
  * @index: index within binary number
  * Return: 1 on success and -1 on error
  */
-int set_bit(unsigned long int *n, unsigned int index)
+int clear_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned int max_bits;
+	unsigned long int max_bits;
 	unsigned long int mask = 1;
 
 	max_bits = (sizeof(unsigned long int) * 8);
