@@ -11,9 +11,10 @@ int _len(const char *s)
 {
 	int count = 0;
 
-	while (s != '\0')
+	while (*s != '\0')
 	{
 		count++;
+		s++;
 	}
 	return (count);
 }
@@ -28,14 +29,14 @@ unsigned int binary_to_uint(const char *b)
 	int len = _len(b);
 	unsigned int uint = 0;
 
-	while (b != '\0')
+	while (*b != '\0')
 	{
-		if (b != '1' || b != '0' || b == NULL)
+		if (*b != '1' || *b != '0' || *b == '\0')
 		{
 			return (0);
 		}
 
-		uint += ((b + '0') * pow(2, len));
+		uint += ((*b + '0') * pow(2, len));
 		b++;
 	}
 	return (uint);
